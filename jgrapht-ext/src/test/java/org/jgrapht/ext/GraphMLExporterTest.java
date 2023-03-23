@@ -61,16 +61,16 @@ public class GraphMLExporterTest
     // TODO jvs 23-Dec-2006:  externalized diff-based testing framework
 
     private static final String UNDIRECTED =
-        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + NL
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
         + "<graphml xmlns=\"http://graphml.graphdrawing.org/xmlns\" xsi:schemaLocation=\"http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">"
         + NL
-        + "<graph edgedefault=\"undirected\">" + NL
-        + "<node id=\"1\"/>" + NL
-        + "<node id=\"2\"/>" + NL
-        + "<node id=\"3\"/>" + NL
-        + "<edge id=\"1\" source=\"1\" target=\"2\"/>" + NL
-        + "<edge id=\"2\" source=\"3\" target=\"1\"/>" + NL
-        + "</graph>" + NL
+        + "    <graph edgedefault=\"undirected\">" + NL
+        + "        <node id=\"1\"/>" + NL
+        + "        <node id=\"2\"/>" + NL
+        + "        <node id=\"3\"/>" + NL
+        + "        <edge id=\"1\" source=\"1\" target=\"2\"/>" + NL
+        + "        <edge id=\"2\" source=\"3\" target=\"1\"/>" + NL
+        + "    </graph>" + NL
         + "</graphml>" + NL;
 
     private static final GraphMLExporter<String, DefaultEdge> exporter =
