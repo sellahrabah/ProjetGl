@@ -109,7 +109,7 @@ public class BronKerboschCliqueFinder<V, E>
         getAllMaximalCliques();
 
         int maximum = 0;
-        Collection<Set<V>> biggest_cliques = new ArrayList<Set<V>>();
+        Collection<Set<V>> biggestCliquesList = new ArrayList<Set<V>>();
         for (Set<V> clique : cliques) {
             if (maximum < clique.size()) {
                 maximum = clique.size();
@@ -117,10 +117,10 @@ public class BronKerboschCliqueFinder<V, E>
         }
         for (Set<V> clique : cliques) {
             if (maximum == clique.size()) {
-                biggest_cliques.add(clique);
+                biggestCliquesList.add(clique);
             }
         }
-        return biggest_cliques;
+        return biggestCliquesList;
     }
 
     private void findCliques(
