@@ -230,8 +230,8 @@ public final class EdmondsKarpMaximumFlow<V, E>
         while (queue.size() != 0) {
             int currentNode = queue.poll();
             for (Arc currentArc : nodes.get(currentNode).outgoingArcs) {
-                if ((currentArc.flow + epsilon) < currentArc.capacity) {
-                    if (!nodes.get(currentArc.head).visited) {
+                if (((currentArc.flow + epsilon) < currentArc.capacity)  &&  (!nodes.get(currentArc.head).visited) ) {
+                    
                         nodes.get(currentArc.head).visited = true;
                         nodes.get(currentArc.head).flowAmount =
                             Math.min(
@@ -239,7 +239,7 @@ public final class EdmondsKarpMaximumFlow<V, E>
                                 currentArc.capacity - currentArc.flow);
                         nodes.get(currentArc.head).lastArc = currentArc;
                         queue.add(currentArc.head);
-                    }
+                    
                 }
             }
         }
