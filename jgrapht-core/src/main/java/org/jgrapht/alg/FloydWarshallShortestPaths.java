@@ -222,10 +222,8 @@ public class FloydWarshallShortestPaths<V, E>
             return null;
         }
 
-        GraphPathImpl<V, E> path =
-            new GraphPathImpl<V, E>(graph, a, b, edges, edges.size());
+        return new GraphPathImpl<V, E>(graph, a, b, edges, edges.size());
 
-        return path;
     }
 
     /**
