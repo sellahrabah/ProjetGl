@@ -352,12 +352,7 @@ public class BlockCutpointGraph<V, E>
 
         public boolean isVertexMasked(V vertex)
         {
-            if (this.vertexComponent.contains(vertex)) {
-                // vertex belongs to component then we do not mask it.
-                return false;
-            } else {
-                return true;
-            }
+        	return !this.vertexComponent.contains(vertex);
         }
     }
 }
