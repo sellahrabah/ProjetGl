@@ -190,6 +190,7 @@ class BellmanFordIterator<V, E>
      *
      * @see java.util.Iterator#remove()
      */
+    @Override
     public void remove()
     {
         throw new UnsupportedOperationException();
@@ -203,11 +204,10 @@ class BellmanFordIterator<V, E>
      */
     protected void assertValidEdge(E edge)
     {
-        if (this.graph instanceof UndirectedGraph<?, ?>) {
-            if (graph.getEdgeWeight(edge) < 0) {
-                throw new IllegalArgumentException(NEGATIVE_UNDIRECTED_EDGE);
-            }
-        }
+    	if (this.graph instanceof UndirectedGraph<?, ?> && graph.getEdgeWeight(edge) < 0) {
+    	    throw new IllegalArgumentException(NEGATIVE_UNDIRECTED_EDGE);
+    	}
+
     }
 
     /**
