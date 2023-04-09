@@ -74,6 +74,12 @@ abstract class AbstractPathElementList<V,
      * Target vertex of the paths.
      */
     protected V vertex;
+    
+    /**
+     * Declare String exception for MAXSIZE NEGATIVE OR ZERO EXCEPTION
+     */
+    public static final String MAXSIZE_NEGATIVE_OR_ZERO_EXCEPTION_MESSAGE = "maxSize is negative or 0";
+
 
     //~ Constructors -----------------------------------------------------------
 
@@ -97,7 +103,7 @@ abstract class AbstractPathElementList<V,
         E edge)
     {
         if (maxSize <= 0) {
-            throw new IllegalArgumentException("maxSize is negative or 0");
+            throw new IllegalArgumentException(MAXSIZE_NEGATIVE_OR_ZERO_EXCEPTION_MESSAGE);
         }
         if (elementList == null) {
             throw new NullPointerException("elementList is null");
@@ -130,7 +136,7 @@ abstract class AbstractPathElementList<V,
         T pathElement)
     {
         if (maxSize <= 0) {
-            throw new IllegalArgumentException("maxSize is negative or 0");
+            throw new IllegalArgumentException(MAXSIZE_NEGATIVE_OR_ZERO_EXCEPTION_MESSAGE);
         }
         if (pathElement == null) {
             throw new NullPointerException("pathElement is null");
@@ -157,7 +163,7 @@ abstract class AbstractPathElementList<V,
     protected AbstractPathElementList(Graph<V, E> graph, int maxSize, V vertex)
     {
         if (maxSize <= 0) {
-            throw new IllegalArgumentException("maxSize is negative or 0");
+            throw new IllegalArgumentException(MAXSIZE_NEGATIVE_OR_ZERO_EXCEPTION_MESSAGE);
         }
 
         this.graph = graph;
