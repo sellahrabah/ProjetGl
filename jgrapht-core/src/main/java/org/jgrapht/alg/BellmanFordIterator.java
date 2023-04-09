@@ -361,7 +361,7 @@ class BellmanFordIterator<V, E>
             getPrevSeenData(
                 Graphs.getOppositeVertex(graph, edge, vertex));
 
-        BellmanFordPathElement<V, E> data =
+       return
             new BellmanFordPathElement<V, E>(
                 graph,
                 prevPathElement,
@@ -369,7 +369,7 @@ class BellmanFordIterator<V, E>
                 cost,
                 epsilon);
 
-        return data;
+      
     }
 
     private void encounterStartVertex()
