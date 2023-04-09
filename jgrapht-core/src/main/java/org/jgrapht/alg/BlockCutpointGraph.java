@@ -291,11 +291,11 @@ public class BlockCutpointGraph<V, E>
     {
         assert (vertex != null);
 
-        Integer numOrder = this.vertex2numOrder.get(vertex);
-        if (numOrder == null) {
+        Integer numOrderTemp = this.vertex2numOrder.get(vertex);
+        if (numOrderTemp == null) {
             return 0;
         } else {
-            return numOrder.intValue();
+            return numOrderTemp.intValue();
         }
     }
 
