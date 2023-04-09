@@ -323,12 +323,12 @@ public class BlockCutpointGraph<V, E>
             this.source = source;
             this.target = target;
         }
-
+        @Override
         public V getSource()
         {
             return this.source;
         }
-
+        @Override
         public V getTarget()
         {
             return this.target;
