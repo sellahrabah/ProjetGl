@@ -127,7 +127,7 @@ public final class DijkstraShortestPath<V, E>
     public List<E> getPathEdgeList()
     {
         if (path == null) {
-            return null;
+            return Collections.emptyList();
         } else {
             return path.getEdgeList();
         }

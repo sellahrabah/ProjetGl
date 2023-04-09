@@ -86,7 +86,7 @@ public class DijkstraShortestPathTest
                 V3,
                 V4,
                 7);
-        assertNull(path.getPathEdgeList());
+        assertEquals(path.getPathEdgeList(), Collections.emptyList());
         assertEquals(Double.POSITIVE_INFINITY, path.getPathLength(), 0);
     }
 
