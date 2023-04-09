@@ -85,7 +85,9 @@ public abstract class Graphs
         // we first create the edge and set the weight to make sure that
         // listeners will see the correct weight upon addEdge.
 
-        assert (g instanceof WeightedGraph<?, ?>) : g.getClass();
+        if (!(g instanceof WeightedGraph<?, ?>)) {
+            throw new IllegalArgumentException("g must be an instance of WeightedGraph");
+        }
         ((WeightedGraph<V, E>) g).setEdgeWeight(e, weight);
 
         return g.addEdge(sourceVertex, targetVertex, e) ? e : null;
