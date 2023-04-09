@@ -89,11 +89,11 @@ public class BronKerboschCliqueFinder<V, E>
         // TODO jvs 26-July-2005:  assert that graph is simple
 
         cliques = new ArrayList<Set<V>>();
-        List<V> potential_clique = new ArrayList<V>();
+        List<V> potentialCliqueList = new ArrayList<V>();
         List<V> candidates = new ArrayList<V>();
-        List<V> already_found = new ArrayList<V>();
+        List<V> alreadyFoundList = new ArrayList<V>();
         candidates.addAll(graph.vertexSet());
-        findCliques(potential_clique, candidates, already_found);
+        findCliques(potentialCliqueList, candidates, alreadyFoundList);
         return cliques;
     }
 
