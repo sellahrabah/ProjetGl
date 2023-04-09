@@ -98,7 +98,7 @@ public class BellmanFordShortestPathTest
                 g,
                 V3,
                 1);
-        assertNull(path.getPathEdgeList(V5));
+        assertEquals(path.getPathEdgeList(V5), Collections.emptyList());
         assertEquals(Double.POSITIVE_INFINITY, path.getCost(V5));
     }
 

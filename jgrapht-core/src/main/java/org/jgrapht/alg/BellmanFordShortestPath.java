@@ -171,7 +171,7 @@ public class BellmanFordShortestPath<V, E>
             this.iter.getPathElement(endVertex);
 
         if (pathElement == null) {
-            return null;
+            return Collections.emptyList();
         }
 
         return pathElement.createEdgeListPath();
