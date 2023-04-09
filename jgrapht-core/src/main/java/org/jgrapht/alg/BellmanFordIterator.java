@@ -57,7 +57,7 @@ class BellmanFordIterator<V, E>
     /**
      * Error message.
      */
-    protected final static String NEGATIVE_UNDIRECTED_EDGE =
+    protected static final String NEGATIVE_UNDIRECTED_EDGE =
         "Negative"
         + "edge-weights are not allowed in an unidrected graph!";
 
