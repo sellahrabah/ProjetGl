@@ -127,6 +127,7 @@ public class GraphReader<V, E>
                 cols = split(_in.readLine());
             }
         } catch (IOException e) {
+        	System.err.println("An I/O error occurred while skipping comments: " + e.getMessage());
         }
         return cols;
     }
