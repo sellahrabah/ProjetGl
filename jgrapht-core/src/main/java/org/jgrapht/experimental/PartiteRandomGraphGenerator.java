@@ -63,6 +63,7 @@ public class PartiteRandomGraphGenerator<V, E>
 
     private final int [] numVertices;
     private final int numEdges;
+    private static final String ILLEGAL_NUM_EDGES = "illegal number of edges";
 
     //~ Constructors -----------------------------------------------------------
 
@@ -85,7 +86,7 @@ public class PartiteRandomGraphGenerator<V, E>
         }
 
         if ((numEdges < 0) || (numEdges > (numVertices1 * numVertices2))) {
-            throw new IllegalArgumentException("illegal number of edges");
+            throw new IllegalArgumentException(ILLEGAL_NUM_EDGES);
         }
 
         final int [] numVertices = {
@@ -108,7 +109,7 @@ public class PartiteRandomGraphGenerator<V, E>
     public PartiteRandomGraphGenerator(int [] numVertices, int numEdges)
     {
         if (numEdges < 0) {
-            throw new IllegalArgumentException("illegal number of edges");
+            throw new IllegalArgumentException(ILLEGAL_NUM_EDGES);
         }
 
         for (int i = 0; i < numVertices.length; i++) {
@@ -118,8 +119,7 @@ public class PartiteRandomGraphGenerator<V, E>
 
             for (int j = 0; j < i; j++) {
                 if (numEdges > (numVertices[i] * numVertices[j])) {
-                    throw new IllegalArgumentException(
-                        "illegal number of edges");
+                    throw new IllegalArgumentException(ILLEGAL_NUM_EDGES);
                 }
             }
         }
