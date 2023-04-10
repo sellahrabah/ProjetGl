@@ -280,12 +280,12 @@ public class FloydWarshallShortestPaths<V, E>
 
         // TODO:  two-level map for paths so that we don't have to
         // iterate over all paths here!
-        for (VertexPair<V> pair : paths.keySet()) {
-            if (pair.getFirst().equals(v)) {
-                found.add(paths.get(pair));
-            }
+        for (Map.Entry<VertexPair<V>, GraphPath<V, E>> entry : paths.entrySet()) {
+        	VertexPair<V> pair = entry.getKey();
+        	if (pair.getFirst().equals(v)) {
+        	found.add(entry.getValue());
+        	}
         }
-
         return found;
     }
 }
