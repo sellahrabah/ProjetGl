@@ -114,6 +114,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#addEdge(Object, Object)
      */
+    @Override
     public E addEdge(V sourceVertex, V targetVertex)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -122,6 +123,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#addEdge(Object, Object, E)
      */
+    @Override
     public boolean addEdge(V sourceVertex, V targetVertex, E e)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -130,6 +132,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#addVertex(Object)
      */
+    @Override
     public boolean addVertex(V v)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -138,6 +141,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#removeAllEdges(Collection)
      */
+    @Override
     public boolean removeAllEdges(Collection<? extends E> edges)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -146,6 +150,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#removeAllEdges(V, V)
      */
+    @Override
     public Set<E> removeAllEdges(V sourceVertex, V targetVertex)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -154,6 +159,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#removeAllVertices(Collection)
      */
+    @Override
     public boolean removeAllVertices(Collection<? extends V> vertices)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -162,6 +168,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#removeEdge(E)
      */
+    @Override
     public boolean removeEdge(E e)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -170,6 +177,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#removeEdge(V, V)
      */
+    @Override
     public E removeEdge(V sourceVertex, V targetVertex)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
@@ -178,6 +186,7 @@ public class GraphSquare<V, E>
     /**
      * @see Graph#removeVertex(V)
      */
+    @Override
     public boolean removeVertex(V v)
     {
         throw new UnsupportedOperationException(UNMODIFIABLE);
