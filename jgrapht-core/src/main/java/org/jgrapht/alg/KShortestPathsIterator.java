@@ -191,6 +191,7 @@ class KShortestPathsIterator<V, E>
      *
      * @see java.util.Iterator#remove()
      */
+    @Override 
     public void remove()
     {
         throw new UnsupportedOperationException();
@@ -237,7 +238,7 @@ class KShortestPathsIterator<V, E>
 
         // endVertex in argument to ensure that stored paths do not disconnect
         // the end-vertex
-        RankingPathElementList<V, E> data =
+        return
             new RankingPathElementList<V, E>(
                 this.graph,
                 this.k,
@@ -245,7 +246,7 @@ class KShortestPathsIterator<V, E>
                 edge,
                 this.endVertex);
 
-        return data;
+       
     }
 
     /**
