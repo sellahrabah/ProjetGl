@@ -1,12 +1,11 @@
 /**
  *
  */
-package org.jgrapht.experimental.alg.color;
+package org.jgrapht.experimental.alg;
 
 import java.util.*;
 
 import org.jgrapht.*;
-import org.jgrapht.experimental.alg.*;
 
 
 /**
