@@ -233,6 +233,7 @@ public class GraphMLExporter<V, E>
 
             if (edgeLabelProvider != null) {
                 // <data>
+            	int indiceDebut = 0;
                 attr.clear();
                 attr.addAttribute("", "", "key", "CDATA", "edge_label");
                 handler.startElement("", "", "data", attr);
@@ -241,7 +242,7 @@ public class GraphMLExporter<V, E>
                 String edgeLabel = edgeLabelProvider.getEdgeName(e);
                 handler.characters(
                     edgeLabel.toCharArray(),
-                    0,
+                    indiceDebut,
                     edgeLabel.length());
                 handler.endElement("", "", "data");
             }
