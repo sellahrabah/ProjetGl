@@ -78,12 +78,7 @@ public class EquivalenceSetCreator<E, C>
 
         HashMap<Integer, List<EquivalenceSet<? super EE, ? super CC>>> map =
             createEqualityGroupMap(elements, aEqComparator, aContext);
-        // each of the map values is a list with one or more groups in it.
-        // Object[] array = map.values().toArray();
-        // for (int i = 0; i < array.length; i++)
-        // {
-        // List list = (List)array[i];
-
+      
         for (List<EquivalenceSet<? super EE, ? super CC>> list : map.values()) {
             for (EquivalenceSet<? super EE, ? super CC> eSet : list) {
                 arrayList.add(eSet);
